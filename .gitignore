@@ -8,3 +8,5 @@
 
 # ignore package dependencies in the "node_modules" directory:
 node_modules
+
+# server startup: set DEBUG=myapp:* & npm start

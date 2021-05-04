@@ -12,6 +12,7 @@ var flash = require('express-flash-messages');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var stocksRouter = require('./routes/stocks');
+var productsRouter = require('./routes/products');
 
 var SESSION_SECRET = process.env.SESSION_SECRET || "super secret"
 
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/stocks', stocksRouter);
+app.use('/products', productsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
